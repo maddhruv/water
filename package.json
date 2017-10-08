@@ -1,0 +1,27 @@
+{
+  "name": "water",
+  "version": "0.0.1",
+  "description": "Redefining HTML Elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "budo dist.js:bundle.js",
+    "build": "browserify dist.js > bundle.js"
+  },
+  "keywords": [
+    "html",
+    "custom html",
+    "watery html"
+  ],
+  "author": "Dhruv Jain <dhruvjainpenny@gmail.com> (https://maddhruv.github.io)",
+  "license": "Apache License",
+  "dependencies": {
+    "distjs": "^1.0.0",
+    "loadjs": "^3.5.1",
+    "zcomponent": "^1.0.4"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "budo": "^10.0.4"
+  }
+}
