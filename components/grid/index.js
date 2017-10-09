@@ -1,10 +1,10 @@
 const ZComponent = require('zcomponent')
 
 class Grid extends ZComponent {
-  set size (value) {
+  set size(value) {
     this.value = value
   }
-  get shadow () {
+  get shadow() {
     return `
     <style>
     :host {
@@ -25,10 +25,10 @@ class GridCol extends ZComponent {
     super()
     var col, size;
   }
-  set size (col) {
+  set size(col) {
     this.col = col
     //this.size = col.slice(3);
-    console.log(this.col.slice(3)*100/12);
+    console.log(this.col.slice(3) * 100 / 12);
     var shadow = document.querySelector('grid-col')
     shadow.innerHTML += `<style>grid-col { width: ${this.col.slice(3)*100/12} }</style>`;
   }
