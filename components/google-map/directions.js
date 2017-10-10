@@ -1,12 +1,13 @@
 const ZComponent = require('zcomponent');
 
-class YouTube extends ZComponent {
+class GoogleMapDirections extends ZComponent {
   constructor() {
     super()
     this._settings = {}
-    this._settings["width"] = "560px"
-    this._settings["height"] = "315px"
-    this._settings["autoplay"] = "0"
+    this._settings["width"] = "600px"
+    this._settings["height"] = "450px"
+    this._settings["zoom"] = "16"
+    this._settings["maptype"] = "roadmap"
   }
 
   set width(value) {
@@ -17,12 +18,20 @@ class YouTube extends ZComponent {
     this._iframeSettings("height", value)
   }
 
-  set autoplay(value) {
-    this._iframeSettings("autoplay", value)
+  set origin(value) {
+    this._iframeSettings("origin", value)
   }
 
-  set src(value) {
-    this._iframeSettings("src", value)
+  set destination(value) {
+    this._iframeSettings("destination", value)
+  }
+
+  set zoom(value) {
+    this._iframeSettings("zoom", value)
+  }
+
+  set maptype(value) {
+    this._iframeSettings("maptype", value)
   }
 
   async _iframeSettings(key, value) {
@@ -32,7 +41,7 @@ class YouTube extends ZComponent {
 
   async _update() {
     var i = document.createElement("iframe");
-    var link = `https://www.youtube.com/embed/${this._settings.src.slice(-11)}?autoplay=${this._settings.autoplay}`
+    var link = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAAje2eJQ38r_NpjFNqI6ULt3EXcyccEek&origin=${this._settings.origin}&destination=${this._settings.destination}&zoom=${this._settings.zoom}&maptype=${this._settings.maptype}`
     i.setAttribute("src", link);
     i.style.width = this._settings.width;
     i.style.height = this._settings.height;
@@ -58,4 +67,4 @@ class YouTube extends ZComponent {
   }
 }
 
-window.customElements.define('youtube-embed', YouTube);
+window.customElements.define('google-map-dir', GoogleMapDirections);

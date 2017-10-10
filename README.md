@@ -2,9 +2,9 @@
 Watery :ocean: Extensible HTML
 
 ## Usage
-### Media
+### Media / Social
 #### YouTube
-YouTube embed player
+YouTube Embed Player
 ```html
   <youtube-embed src="_videoURL_" width="_width_" height="_height_" />
 ```
@@ -13,6 +13,31 @@ YouTube embed player
 * width => Width(in _px_) for the video player (defaults to 560px)
 * height => Height(in _px_) for the video player (defaults to 315px)
 * autoplay => Whether the video will autoplay (defaults to 0), set 1 if autoplays
+
+#### Google Maps
+Google Maps Embed
+##### Place
+```html
+  <google-map place="_place_" width="_width_" height="_height_" />
+```
+##### Options
+* place => Place Location (like Taj Mahal)/Coordinates (27.122,75.325)(comma separated)
+* width => Width(in _px_) for the video player (defaults to 600px)
+* height => Height(in _px_) for the video player (defaults to 450px)
+* zoom => initial zoom level of map (defaults to 16) (ranges from 0 to 21)
+* map-type => defines the type of map tiles to load (defaults to roadmap) (roadmap/satellite)
+
+##### Directions
+```html
+  <google-map-dir origin="_origin_" destination="_destination_" width="_width_" height="_height_" />
+```
+##### Options
+* origin => Origin Location (like Taj Mahal)/Coordinates (27.122,75.325)(comma separated)
+* destination => Destination Location (like Red Fort)/Coordinates (27.122,75.325)(comma separated)
+* width => Width(in _px_) for the video player (defaults to 600px)
+* height => Height(in _px_) for the video player (defaults to 450px)
+* zoom => initial zoom level of map (defaults to 16) (ranges from 0 to 21)
+* map-type => defines the type of map tiles to load (defaults to roadmap) (roadmap/satellite)
 
 ## To Do (in dev)
 ### Basic
@@ -29,4 +54,4 @@ YouTube embed player
 - [X] YouTube
 - [ ] Facebook Page/Post
 - [ ] Twitter
-- [ ] Google Maps
+- [X] Google Maps
