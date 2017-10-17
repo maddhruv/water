@@ -1,10 +1,10 @@
 const ZComponent = require('zcomponent')
 
 class Grid extends ZComponent {
-  set size(value) {
+  set size (value) {
     this.value = value
   }
-  get shadow() {
+  get shadow () {
     return `
     <style>
     :host {
@@ -21,23 +21,19 @@ class Grid extends ZComponent {
 }
 
 class GridCol extends ZComponent {
-  constructor() {
-    super()
-    var col, size;
-  }
-  set size(col) {
+  set size (col) {
     this.col = col
-    //this.size = col.slice(3);
-    console.log(this.col.slice(3) * 100 / 12);
+    // this.size = col.slice(3);
+    console.log(this.col.slice(3) * 100 / 12)
     var shadow = document.querySelector('grid-col')
-    shadow.innerHTML += `<style>grid-col { width: ${this.col.slice(3)*100/12} }</style>`;
+    shadow.innerHTML += `<style>grid-col { width: ${this.col.slice(3) * 100 / 12} }</style>`
   }
 
-  async _gridSettings(value) {
-    this._settings = value;
+  async _gridSettings (value) {
+    this._settings = value
   }
 
-  get shadow() {
+  get shadow () {
     return `
     <style>
     :host{
@@ -53,5 +49,5 @@ class GridCol extends ZComponent {
   }
 }
 
-window.customElements.define('my-grid', Grid);
-window.customElements.define('grid-col', GridCol);
+window.customElements.define('my-grid', Grid)
+window.customElements.define('grid-col', GridCol)
