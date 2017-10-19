@@ -17,8 +17,7 @@
   "license": "Apache License",
   "dependencies": {
     "distjs": "^1.0.0",
-    "loadjs": "^3.5.1",
-    "zcomponent": "^1.0.4"
+    "loadjs": "^3.5.1"
   },
   "devDependencies": {
     "browserify": "^14.4.0",

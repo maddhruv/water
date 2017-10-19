@@ -1,6 +1,4 @@
-const ZComponent = require('zcomponent')
-
-class Grid extends ZComponent {
+class Grid extends HTMLElement {
   set size (value) {
     this.value = value
   }

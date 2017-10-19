@@ -1,6 +1,4 @@
-const ZComponent = require('zcomponent')
-
-class GoogleMapDirections extends ZComponent {
+class GoogleMapDirections extends HTMLElement {
   constructor () {
     super()
     this._settings = {}

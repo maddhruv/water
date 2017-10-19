@@ -1,6 +1,4 @@
-const ZComponent = require('zcomponent')
-
-class YouTube extends ZComponent {
+class YouTube extends HTMLElement {
   constructor () {
     super()
     this._settings = {}
