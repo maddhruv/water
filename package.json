@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "budo dist.js:bundle.js",
-    "build": "browserify dist.js > bundle.js"
+    "dev": "watchify index.js -o dist/bundle.js",
+    "build": "browserify index.js > dist/bundle.js"
   },
   "keywords": [
     "html",
@@ -15,13 +15,10 @@
   ],
   "author": "Dhruv Jain <dhruvjainpenny@gmail.com> (https://maddhruv.github.io)",
   "license": "Apache License",
-  "dependencies": {
-    "distjs": "^1.0.0",
-    "loadjs": "^3.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^14.4.0",
-    "budo": "^10.0.4",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "watchify": "^3.11.0"
   }
 }
