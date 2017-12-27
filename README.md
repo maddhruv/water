@@ -1,4 +1,6 @@
 # water
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/maddhruv/water.svg)](https://greenkeeper.io/)
 Watery :ocean: Extensible HTML
 
 ## Usage
